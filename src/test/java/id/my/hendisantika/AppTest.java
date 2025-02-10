@@ -22,9 +22,7 @@ public class AppTest {
 
 	@BeforeEach
 	void init() {
-		System.out.println
-				("@BeforeEach - executes before each test method in this class")
-		;
+		System.out.println("@BeforeEach - executes before each test method in this class");
 	}
 
 	@DisplayName("Single test successful")
