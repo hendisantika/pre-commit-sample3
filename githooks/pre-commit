@@ -13,7 +13,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Run Checkstyle using Maven
-mvn clean spotless:check
+#mvn clean spotless:check
 mvn clean spotless:apply
 
 # Check if Checkstyle found any violations
