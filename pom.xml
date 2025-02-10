@@ -91,7 +91,7 @@
                             <tabs>true</tabs>
                             <spacesPerTab>4</spacesPerTab>
                         </indent>
-                        <!--                        <googleJavaFormat/>-->
+                        <googleJavaFormat/>
                     </java>
                 </configuration>
                 <executions>
