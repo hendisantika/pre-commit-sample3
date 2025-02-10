@@ -45,8 +45,7 @@ public class AppTest {
             () -> assertEquals(numbers[1], 1),
             () -> assertEquals(numbers[3], 3),
             () -> assertEquals(numbers[2], 2),
-            () -> assertEquals(numbers[4], 4)
-    );
+            () -> assertEquals(numbers[4], 4));
   }
 
   @org.junit.jupiter.api.Test
