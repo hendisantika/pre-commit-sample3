@@ -3,17 +3,10 @@
 # Date: Thursday, January 30 2025 09.00 WIB
 # Usage: Pre-Commit Check Style Shell Script
 # Author: Hendi Santika {https:/s.id/hendisantika} under GPL v2.x+
-# Run Maven tests
-mvn clean test
 
-# Check the result of the Maven test command
-if [ $? -ne 0 ]; then
-    echo "Maven tests failed. Commit aborted."
-    exit 1
-fi
 
 # Run Checkstyle using Maven
-#mvn clean spotless:check
+mvn clean spotless:check
 mvn clean spotless:apply
 
 # Check if Checkstyle found any violations
@@ -23,4 +16,13 @@ if [ $? -ne 0 ]; then
   echo "Check the Checkstyle report in the 'target/site' directory."
   echo "Hendi Santika: $(date)"
   exit 1
+fi
+
+# Run Maven tests
+mvn clean test
+
+# Check the result of the Maven test command
+if [ $? -ne 0 ]; then
+    echo "Maven tests failed. Commit aborted."
+    exit 1
 fi
