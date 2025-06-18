@@ -1,13 +1,13 @@
 package id.my.hendisantika;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
-
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Created by IntelliJ IDEA. Project : pre-commit-sample10 User: hendisantika Link:
@@ -41,21 +41,21 @@ public class AppTest {
   void groupAssertions() {
     int[] numbers = {0, 1, 2, 3, 4};
     assertAll(
-            "numbers",
-            () -> assertEquals(numbers[1], 1),
-            () -> assertEquals(numbers[3], 3),
-            () -> assertEquals(numbers[2], 2),
-            () -> assertEquals(numbers[4], 4));
+        "numbers",
+        () -> assertEquals(numbers[1], 1),
+        () -> assertEquals(numbers[3], 3),
+        () -> assertEquals(numbers[2], 2),
+        () -> assertEquals(numbers[4], 4));
   }
 
   @org.junit.jupiter.api.Test
   void shouldThrowException() {
     Throwable exception =
-            assertThrows(
-                    UnsupportedOperationException.class,
-                    () -> {
-                      throw new UnsupportedOperationException("Not supported");
-                    });
+        assertThrows(
+            UnsupportedOperationException.class,
+            () -> {
+              throw new UnsupportedOperationException("Not supported");
+            });
     assertEquals("Not supported", exception.getMessage());
   }
 
@@ -63,9 +63,9 @@ public class AppTest {
   void assertThrowsException() {
     String str = null;
     assertThrows(
-            IllegalArgumentException.class,
-            () -> {
-              Integer.valueOf(str);
-            });
+        IllegalArgumentException.class,
+        () -> {
+          Integer.valueOf(str);
+        });
   }
 }
