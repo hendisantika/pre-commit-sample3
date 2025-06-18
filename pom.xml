@@ -42,8 +42,8 @@
                 <version>3.5.0</version>
                 <configuration>
                     <installHooks>
-                        <pre-commit>githooks/pre-commit</pre-commit>
-                        <commit-msg>githooks/commit-msg</commit-msg>
+                        <pre-commit>hooks/pre-commit</pre-commit>
+                        <commit-msg>hooks/commit-msg</commit-msg>
                     </installHooks>
                     <gitConfig>
                         <!-- The location of the directory you are using to store the Git hooks in your project. -->
