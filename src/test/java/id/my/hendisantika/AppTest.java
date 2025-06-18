@@ -54,7 +54,7 @@ public class AppTest {
             assertThrows(
                     UnsupportedOperationException.class,
                     () -> {
-                      throw new UnsupportedOperationException("Not supported");
+                        throw new UnsupportedOperationException("Not supported");
                     });
     assertEquals("Not supported", exception.getMessage());
   }
@@ -65,7 +65,7 @@ public class AppTest {
     assertThrows(
             IllegalArgumentException.class,
             () -> {
-              Integer.valueOf(str);
+                Integer.valueOf(str);
             });
   }
 }
